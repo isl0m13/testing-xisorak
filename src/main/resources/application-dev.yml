@@ -1,0 +1,117 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://185.196.213.204:5432/app_gidro
+    username: gidro
+    password: Sw@Ts8D26HbaJXtdZAYN
+    driver-class-name: org.postgresql.Driver
+
+#logging:
+#  pattern:
+#    file: "%d{yyyy-MM-dd HH:mm:ss:SSS} - %msg%n"
+#  file:
+#    name: /home/gidrotech/logs/app.log
+#    max-history: 365
+#  level:
+#    org.springframework.web: ERROR
+#    org.hibernate: ERROR
+
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+
+app:
+  run-type: default         #default || refresh
+  admin:
+    reservoir: all
+    username: uzgidro
+    password: uzgidro2024!@#
+    firstName: Admin
+    lastName: Admin
+    secret-key: g3fXbUlLCV
+    files:
+      piezometers: "/home/gidrotech/ftp/piezometers/piezometers.csv"
+      water-level-gauges: "/home/gidrotech/ftp/waterlevelgauges/waterlevelgauges.csv"
+      water-level-in-volume: "/home/gidrotech/ftp/waterlevelgauges/waterlevelinvolume.csv"
+      spillways: "/home/gidrotech/ftp/spillways/spillways.csv"
+      water-flow-meters: "/home/gidrotech/ftp/waterflowmeters/waterflowmeters.csv"
+      hydrological-stations: "/home/gidrotech/ftp/hydrologicalstations/hydrologicalstations.csv"
+      dam-body-devices: "/home/gidrotech/ftp/dambodydevices/dambodydevices.csv"
+      safety-criteria: "/home/gidrotech/ftp/safety-criteria/safety-criteria.csv"
+      crack-gauge: "/home/gidrotech/ftp/crackgauges/crackgauges.csv"
+      plumb: "/home/gidrotech/ftp/plumbs/plumbs.csv"
+      tiltmeters: "/home/gidrotech/ftp/tiltmeters/tiltmeters.csv"
+      deformometers: "/home/gidrotech/ftp/deformometers/deformometers.csv"
+    upload:
+      folder: "/home/gidrotech/images/"
+  dispechr:
+    folder: "/home/gidrotech/ftp/Xisorak/dispechr/"
+  kzr_tunel:
+    folder: "/home/gidrotech/ftp/Xisorak/krz_tunel/"
+  sempatern_tunell:
+    folder: "/home/gidrotech/ftp/Xisorak/Sempatern_tunell/"
+  vw:
+    folder: "/home/gidrotech/ftp/Xisorak/greben_gateway/vw/"
+  anl4:
+    folder: "/home/gidrotech/ftp/Xisorak/greben_gateway/anl4/"
+  anl1:
+    folder: "/home/gidrotech/ftp/Xisorak/greben_gateway/anl1/"
+  akhangaran:
+    folder: "/home/gidrotech/ftp/Akhangaran/akhangaran/"
+  omnialog_795:
+    folder: "/home/gidrotech/ftp/Andijan/omnialog_795"
+  omnialog_804_12_seksiya:
+    folder: "/home/gidrotech/ftp/Andijan/omnialog_804_12_seksiya"
+  omnialog_804_24_seksiya:
+    folder: "/home/gidrotech/ftp/Andijan/omnialog_804_24_seksiya"
+  omnialog_817_chap:
+    folder: "/home/gidrotech/ftp/Andijan/omnialog_817_chap"
+  omnialog_817_ong:
+    folder: "/home/gidrotech/ftp/Andijan/omnialog_817_ong"
+  gateway_bosimsiz:
+    folder: "/home/gidrotech/ftp/Andijan/gateway/bosimsiz"
+  omnialog_885_shelemer:
+    folder: "/home/gidrotech/ftp/Andijan/omnialog_885_shelemer"
+  omnialog_845_atves:
+    folder: "/home/gidrotech/ftp/Andijan/omnialog_845_atves"
+  t_1000:
+    folder: "/home/gidrotech/ftp/Andijan/gateway/T-1000"
+  tiltmeters:
+    folder: "/home/gidrotech/ftp/Andijan/gateway/Tiltmeters"
+  omnialog_804_28_seksiya:
+    folder: "/home/gidrotech/ftp/Andijan/omnialog_804_28_seksiya"
+  gateway_bosimsiz_charvak:
+    folder: "/home/gidrotech/ftp/Charvak/gateway/bosimsiz"
+  gateway_vodosliv_charvak:
+    folder: "/home/gidrotech/ftp/Charvak/gateway/Vodosliv"
+  tasmali_drenaj:
+    folder: "/home/gidrotech/ftp/Charvak/Tasmali_drenaj"
+  transportni_sh:
+    folder: "/home/gidrotech/ftp/Charvak/Transportni_sh"
+  shtolniya_1:
+    folder: "/home/gidrotech/ftp/Charvak/1-shtolniya"
+
+
+jwt:
+  access:
+    key: e4d108799a492f0984189c3743c50dfdbed2f1d3290b28664e323c41fd5e3827
+    expiration-time: 86400000
+  refresh:
+    key: d04d00b0de300a673cc328778fcab74141f063bea03a213e5ba2858d9fe43864
+    expiration-time: 172800000
+
+
+base:
+  url: https://backend.gidrotexmonitoring.uz
+
+

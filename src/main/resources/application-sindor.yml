@@ -1,0 +1,82 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/app_gidro
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 15MB
+
+
+#logging:
+#  pattern:
+#    file: "%d{yyyy-MM-dd HH:mm:ss:SSS} - %msg%n"
+#  file:
+#    name: app.log
+#    max-history: 365
+#  level:
+#    org.springframework.web: ERROR
+#    org.hibernate: ERROR
+
+
+
+app:
+  run-type: refresh
+  admin:
+    username: admin
+    password: admin123@
+    firstName: Admin
+    lastName: Admin
+    files:
+      piezometers: "C:/Users/Acer-PC/Desktop/atnt/backend/devices/piezometers/piezometers.csv"
+      water-level-gauges: "C:/Users/Acer-PC/Desktop/atnt/backend/devices/waterlevelgauges/waterlevelgauges.csv"
+      spillways: "C:/Users/Acer-PC/Desktop/atnt/backend/devices/spillways/spillways.csv"
+      water-flow-meters: "C:/Users/Acer-PC/Desktop/atnt/backend/devices/waterflowmeters/waterflowmeters.csv"
+      hydrological-stations: "C:/Users/Acer-PC/Desktop/atnt/backend/devices/hydrologicalstations/hydrologicalstations.csv"
+      dam-body-devices: "C:/Users/Acer-PC/Desktop/atnt/backend/devices/dambodydevices/dambodydevices.csv"
+      safety-criteria: "C:/Users/Acer-PC/Desktop/atnt/backend/devices/safety-criteria/safety-criteria.csv"
+    upload:
+     folder: "C:/Users/Acer-PC/Desktop/atnt/backend/files"
+  dispechr:
+    folder: "C:/Users/Acer-PC/Desktop/atnt/backend/ftp/Xisarak/ftp/dispechr"
+  kzr_tunel:
+    folder: "C:/Users/Acer-PC/Desktop/atnt/backend/ftp/Xisarak/ftp/krz_tunel"
+  sempatern_tunell:
+    folder: "C:/Users/Acer-PC/Desktop/atnt/backend/ftp/Xisarak/ftp/Sempatern_tunell"
+  vw:
+    folder: "C:/Users/Acer-PC/Desktop/atnt/backend/ftp/Xisarak/ftp/greben_gateway/vw"
+  anl4:
+    folder: "C:/Users/Acer-PC/Desktop/atnt/backend/ftp/Xisarak/ftp/greben_gateway/anl4"
+  anl1:
+    folder: "C:/Users/Acer-PC/Desktop/atnt/backend/ftp/Xisarak/ftp/greben_gateway/anl1"
+  akhangaran:
+    folder: "C:/Users/Acer-PC/Desktop/atnt/backend/ftp/Akhangaran/akhangaran"
+  omnialog_795:
+    folder: "C:/Users/Acer-PC/Desktop/atnt/backend/ftp/Andijan/ftp/omnialog_795"
+
+
+
+jwt:
+  access:
+    key: e4d108799a492f0984189c3743c50dfdbed2f1d3290b28664e323c41fd5e3827
+    expiration-time: 86400000
+  refresh:
+    key: d04d00b0de300a673cc328778fcab74141f063bea03a213e5ba2858d9fe43864
+    expiration-time: 172800000
+
+
+base:
+ url: http://localhost:8080
+

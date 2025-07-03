@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: dev
+
+
+
+  jpa:
+    hibernate:
+      ddl-auto: create #hamma aplication uchun ummumiy shu erdan boshqarish
+
+
+
+#small and big format file(image)
+
+
+
+
+
+
+
+
+
+

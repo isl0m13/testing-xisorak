@@ -1,0 +1,119 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/app_gidro
+    username: postgres
+    password: root123
+    driver-class-name: org.postgresql.Driver
+
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+
+#logging:
+#  pattern:
+#    file: "%d{yyyy-MM-dd HH:mm:ss:SSS} - %msg%n"
+#  file:
+#    name: app.log
+#    max-history: 365
+#  level:
+#    org.springframework.web: ERROR
+#    org.hibernate: ERROR
+
+
+
+app:
+  run-type: default
+  admin:
+    reservoir: andijan
+    username: andijan
+    password: andijan
+    firstName: Andijan
+    lastName: Andijan
+    secret-key: g3fXbUlLCV
+    files:
+      piezometers: "C:/app/back/devices/piezometers.csv"
+      water-level-gauges: "C:/app/back/devices/waterlevelgauges.csv"
+      water-level-in-volume: "C:/app/back/devices/waterlevelinvolume.csv"
+      spillways: "C:/app/back/devices/spillways.csv"
+      water-flow-meters: "C:/app/back/devices/waterflowmeters.csv"
+      hydrological-stations: "C:/app/back/devices/hydrologicalstations.csv"
+      dam-body-devices: "C:/app/back/devices/dambodydevices.csv"
+      safety-criteria: "C:/app/back/devices/safety-criteria.csv"
+      crack-gauge: "C:/app/back/devices/crackgauges.csv"
+      plumb: "C:/app/back/devices/plumbs.csv"
+      tiltmeters: "C:/app/back/devices/tiltmeters.csv"
+      deformometers: "/Users/mirolim/Desktop/Fidrotexm/deformometers/deformometers.csv"
+    upload:
+     folder: "C:/app/back/files"
+  dispechr:
+    folder: "/Users/mirolim/Desktop/Fidrotexm/Xisorak/ftp/dispechr"
+  kzr_tunel:
+    folder: "/Users/mirolim/Desktop/Fidrotexm/Xisorak/ftp/krz_tunel"
+  sempatern_tunell:
+    folder: "/Users/mirolim/Desktop/Fidrotexm/Xisorak/ftp/Sempatern_tunell"
+  vw:
+    folder: "/Users/mirolim/Desktop/Fidrotexm/Xisorak/ftp/greben_gateway/vw"
+  anl4:
+    folder: "/Users/mirolim/Desktop/Fidrotexm/Xisorak/ftp/greben_gateway/anl4"
+  anl1:
+      folder: "/home/gidrotech/ftp/Xisorak/greben_gateway/anl1/"
+  akhangaran:
+    folder: "C:/ftp/akhangaran"
+  omnialog_795:
+    folder: "C:/ftp/omnialog_795"
+  omnialog_804_12_seksiya:
+    folder: "C:/ftp/omnialog_804_12_seksiya"
+  omnialog_804_24_seksiya:
+    folder: "C:/ftp/omnialog_804_24_seksiya"
+  omnialog_817_chap:
+    folder: "C:/ftp/omnialog_817_chap"
+  omnialog_817_ong:
+    folder: "C:/ftp/omnialog_817_ong"
+  gateway_bosimsiz:
+    folder: "C:/ftp/gateway/bosimsiz"
+  omnialog_885_shelemer:
+    folder: "C:/ftp/omnialog_885_shelemer"
+  omnialog_845_atves:
+    folder: "C:/ftp/omnialog_845_atves"
+  t_1000:
+    folder: "/C:/ftp/gateway/T-1000"
+  tiltmeters:
+    folder: "C:/ftp/gateway/Tiltmeters"
+  omnialog_804_28_seksiya:
+    folder: "C:/ftp/omnialog_804_28_seksiya"
+  gateway_bosimsiz_charvak:
+    folder: "/Users/mirolim/Desktop/Fidrotexm/Charvak/ftp/gateway/bosimsiz"
+  gateway_vodosliv_charvak:
+    folder: "/Users/mirolim/Desktop/Fidrotexm/Charvak/ftp/gateway/Vodosliv"
+  tasmali_drenaj:
+    folder: "/Users/mirolim/Desktop/Fidrotexm/Charvak/ftp/Tasmali_drenaj"
+  transportni_sh:
+    folder: "/Users/mirolim/Desktop/Fidrotexm/Charvak/ftp/Transportni_sh"
+  shtolniya_1:
+    folder: "/Users/mirolim/Desktop/Fidrotexm/Charvak/ftp/1-shtolniya"
+
+
+
+jwt:
+  access:
+    key: e4d108799a492f0984189c3743c50dfdbed2f1d3290b28664e323c41fd5e3827
+    expiration-time: 86400000
+  refresh:
+    key: d04d00b0de300a673cc328778fcab74141f063bea03a213e5ba2858d9fe43864
+    expiration-time: 172800000
+
+
+base:
+ url: http://10.119.170.10:8080
+
